@@ -1,0 +1,35 @@
+import com.example.Feline;
+import org.junit.Assert;
+import org.junit.Test;
+
+import java.util.List;
+import java.util.Random;
+
+public class FelineTest {
+    private final List<String> expectedFood = List.of("Животные", "Птицы", "Рыба");
+    Random random = new Random();
+    Feline feline = new Feline();
+    private final int kittensCount = random.nextInt();
+
+
+    @Test
+    public void eatMeatTest() throws Exception {
+
+        Assert.assertEquals(expectedFood, feline.eatMeat());
+    }
+
+    @Test
+    public void getFamelyTest() {
+        Assert.assertEquals("Кошачьи", feline.getFamily());
+    }
+
+    @Test
+    public void defaltGetKittensTest() {
+        Assert.assertEquals(1, feline.getKittens());
+    }
+
+    @Test
+    public void getKittensTest() {
+        Assert.assertEquals(kittensCount, feline.getKittens(kittensCount));
+    }
+}
