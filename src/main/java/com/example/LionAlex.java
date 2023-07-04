@@ -7,8 +7,8 @@ public class LionAlex extends Lion {
     private final List<String> friends = List.of("Зебра Марти", "Бегемотиха Глория", "Жираф Мелман");
     private final String placeOfLiving = "Нью-Йоркский зоопарк";
 
-    public LionAlex() throws Exception {
-        super("Самец");
+    public LionAlex(Feline feline) {
+        super(feline, "Самец");
     }
 
     public List<String> getFriends() {

@@ -8,9 +8,8 @@ import java.util.Random;
 public class FelineTest {
     private final List<String> expectedFood = List.of("Животные", "Птицы", "Рыба");
     Random random = new Random();
-    Feline feline = new Feline();
     private final int kittensCount = random.nextInt();
-
+    Feline feline = new Feline();
 
     @Test
     public void eatMeatTest() throws Exception {

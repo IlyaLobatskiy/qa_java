@@ -1,27 +1,33 @@
+import com.example.Feline;
 import com.example.LionAlex;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import java.util.List;
-
+@RunWith(MockitoJUnitRunner.class)
 public class LionAlexTest {
+    @Mock
+    Feline feline;
+
+    LionAlex alex = new LionAlex(feline);
 
     @Test
     public void getFriendsTest() throws Exception {
-        LionAlex lionAlex = new LionAlex();
-        Assert.assertEquals(List.of("Зебра Марти", "Бегемотиха Глория", "Жираф Мелман"), lionAlex.getFriends());
+        Assert.assertEquals(List.of("Зебра Марти", "Бегемотиха Глория", "Жираф Мелман"), alex.getFriends());
     }
 
     @Test
-    public void getPlaceOfLivingTest() throws Exception {
-        LionAlex lionAlex = new LionAlex();
-        Assert.assertEquals("Нью-Йоркский зоопарк", lionAlex.getPlaceOfLiving());
+    public void getPlaceOfLivingTest() {
+        Assert.assertEquals("Нью-Йоркский зоопарк", alex.getPlaceOfLiving());
     }
 
     @Test
-    public void getKittensTest() throws Exception {
-        LionAlex lionAlex = new LionAlex();
-        Assert.assertEquals(0, lionAlex.getKittens());
+    public void getKittensTest() {
+        Assert.assertEquals(0, alex.getKittens());
     }
 
 }
