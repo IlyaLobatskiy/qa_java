@@ -15,7 +15,4 @@
 Для получения отчета нажми [тут](mvn%20verify)
 
 
-<img alt="Логотип практикума" width="300" src="https://www.codewars.com/users/IlyaLobatskiy/badges/large">
-
-
 ###### by I.Lobatskiy
